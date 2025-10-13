@@ -1,7 +1,6 @@
-let numerosLoteria = new Map();
-let numeros = 5;
+let numerosLoteria = new Set();
 
-do {
+while (numerosLoteria.size < 5 ){
     let loteria = new Array();
     for (let i = 0; i < 6; i++) {
         //creamos numero aleatorio
@@ -11,4 +10,4 @@ do {
     }
     numerosLoteria.add(loteria);
     console.log(loteria);
-} while (numeros < 5 );//50
+}//50
