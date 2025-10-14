@@ -14,6 +14,9 @@ while (numerosLoteria.size < 5 ){
     }
     numerosLoteria.add(loteriaArray);
 }
+
+console.log('Numeros de loteria');
+
 for (const num of numerosLoteria) {
     let imprimir = '';
     for (const e in num) {

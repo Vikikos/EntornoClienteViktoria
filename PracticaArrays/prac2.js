@@ -10,6 +10,7 @@ for (let i = 0; i < 10000; i++) {
     let veces = vecesNumAleatorio.get(numrandom);
     vecesNumAleatorio.set(numrandom,(veces+1));
 }
+console.log('Frecuencias');
 for (let [numero,veces] of vecesNumAleatorio) {
     console.log('Numero ' + numero + ': ' + veces);
 }
