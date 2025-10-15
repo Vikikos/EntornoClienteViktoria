@@ -8,9 +8,10 @@
 body{
     /*background: linear-gradient(0deg,rgba(64, 35, 28, 1) 0%, rgba(217, 128, 20, 0.73) 100%);*/
     background-color: rgb(255, 242, 226);
-    background-image: url('img/fondo-principal.jpg');
+    background-image: url('img/fondo-principal.jpeg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto;
+    background-position: center;
     padding: 3em;
     min-height: 100dvh;
 } 
@@ -35,7 +36,6 @@ h1{
 }
 h2{
     padding: 1em;
-    opacity: 0.8;
     padding-bottom: 0;
 }
 ul{
@@ -51,4 +51,14 @@ a:hover{
 p{
     text-indent: 50px;
     padding: 1.5em;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 550px){
+    main{
+        width: auto;
+    }
+    h1{
+        font-size: 2em;
+    }
 }
