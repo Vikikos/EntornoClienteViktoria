@@ -17,5 +17,13 @@ console.log(arrayNuevo);
 
 let suma = arrayNuevo.reduce((per1,per2) => per1.edad+ per2.edad);
 
-
 console.log(suma);
+console.log();
+
+//Profesora
+const resulatado = personas
+.filter((persona)=>persona.edad>18)
+.map((persona)=>persona.edad*2)
+.reduce((sumaTotal,edad)=>sumaTotal+edad,0);
+
+console.log(resulatado);

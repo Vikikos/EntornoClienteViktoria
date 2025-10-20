@@ -1,11 +1,9 @@
-let palabras =  new Array();
-console.log(palabra);
-do {
-   var 
-   palabra = prompt('Dime una palabra');
-    //palabras.push(palabra);
+let palabras =  pedirpalabra();
 
-} while (palabra != "" || palabra != null);
+palabras.sort();//ordenamos alfabeticamente
 
-//let caja = document.getElementById('res');
-//caja.textContent = palabras;
+
+palabras.reverse();
+
+let caja = document.getElementById('res');
+caja.textContent = palabras;
