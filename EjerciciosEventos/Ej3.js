@@ -1,16 +1,7 @@
-let deletElement = () => {
-    document.getElementById('boxP').removeChild(this);
-    console.log('Eliminar')
-}
 
-let hideElement = () => {
-    console.log(this)
-    this.style.display = 'none';
-    console.log('ocultar')
-}
+const elementsP = document.getElementsByClassName('p3');
 
-let elementsP = document.getElementsByClassName('p3');
 for (const x in elementsP) {
-    elementsP[x].onclick = hideElement;
-    elementsP[x].ondblclick = deletElement;
+    //elementsP[x].onclick = () =>{this.style.display = 'none'};
+   // elementsP[x].ondblclick = () => {document.getElementById('boxP').removeChild(this)};
 }
