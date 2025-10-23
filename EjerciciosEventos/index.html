@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios Eventos</title>
+    <style>
+        #cajaEj6 > div{
+            width: 60px;
+            aspect-ratio: 1 / 1;
+        }
+    </style>
 </head>
 <body>
     <h1>Ejercicios Clase Eventos</h1>
@@ -12,15 +18,15 @@
     <h2>Ejercicio 1</h2>
     <button id="buttonAddLi">Nuevo Numero</button>
     <ul id="numberList"></ul>
-    <script src="Ej1.js"></script>
+    <script src="Ej1.js" defer></script>
 
     <h2>Ejercicio 2</h2>
     <p id="mousePosition"></p>
-    <script src="Ej2.js"></script>
+    <script src="Ej2.js" defer></script>
 
     <h2>Ejercicio 3</h2>
     <div id="boxP">
-        <p class="p3" onclick="this.style.display = 'none'">
+        <p class="p3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi provident 
             molestias possimus soluta numquam ea tempore quod fugiat incidunt, debitis 
             mollitia vero quas veritatis amet reiciendis nam, quaerat dignissimos? 
@@ -37,7 +43,38 @@
             dolorum repellendus quam, dicta nulla fugit! Temporibus, voluptate earum!
         </p>
     </div>
-    <script src="Ej3.js"></script>
-    
+    <button onclick="aparecer()">Ver p ocultos</button>
+    <script src="Ej3.js" defer></script>
+
+    <h2>Ejercicio 4</h2>
+    <button onclick="saludar('Juan')">Juan</button>
+    <button onclick="saludar('Ana')">Ana</button>
+    <button onclick="saludar('Luis')">Luis</button>
+    <script src="Ej4.js" defer></script>
+
+    <h2>Ejercicio 5</h2>
+    <form action="">
+        <label for="texto">Escribe algo</label>
+        <input type="text" name="texto" id="texto">
+        <input type="submit" onclick="contarCaracteres()">
+    </form>
+    <script src="Ej5.js" defer></script>
+
+    <h2>Ejercicio 6</h2>
+    <div id="cajaEj6">
+        <div class="Ej6" style="background-color: red;"></div>
+        <div class="Ej6" style="background-color: blue;"></div>
+        <div class="Ej6" style="background-color: green;"></div>
+    </div>
+    <script src="Ej6.js" defear></script>
+
+    <h2>Ejercicio 7</h2>
+    <select name="paises" id="paises">
+        <option value="" selected disabled></option>
+        <option value="España">España</option>
+        <option value="Italia">Italia</option>
+        <option value="Portugal">Portugal</option>
+    </select>
+    <script src="Ej7.js" defer></script>
 </body>
 </html>
