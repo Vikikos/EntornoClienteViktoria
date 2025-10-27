@@ -9,3 +9,4 @@ for (const x in divColor) {
     });
     
 }
+//funciones flecha no tienen this
