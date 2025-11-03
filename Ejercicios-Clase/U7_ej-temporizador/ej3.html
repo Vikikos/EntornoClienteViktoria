@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <h1>Pagina</h1>
+    <div id="cajaVeces"></div>
+    <script>
+        //mio
+        document.getElementById('cajaVeces').textContent ='Has visto la pagina ' + localStorage.getItem('vecesVista') + ' veces'
+        if(localStorage.getItem('veceVista')>=10){
+            localStorage.setItem('vecesVista',0);
+        }
+        //profe
+        let visitas = localStorage.getItem('visitas');
+        if(visitas){
+            visitas = parseInt(visitas)++;
+        } else{
+            visitas =1;
+        }
+
+        if(visitas>10){
+            visitas = 0;
+            localStorage.removeItem('visitas');
+        }else{
+            localStorage.setItem('visitas',visitas);
+        }
+        document.getElementById('cajaVeces').textContent ='Has visto la pagina ' + localStorage.getItem('visitas') + ' veces'
+    </script>
+</body>
+</html>

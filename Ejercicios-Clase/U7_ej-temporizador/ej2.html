@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 2</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100dvh;
+        }
+        #barraCarga{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            width: 160px;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div id="barraCarga"></div>
+    <script>
+        let cajaBarra = document.getElementById('barraCarga');
+        var cont=0;
+        var temp2 = setInterval(function(){
+            cajaBarra.innerHTML += '<div>█</div>';
+            cont++;
+            if(cont>=10){
+                clearInterval(temp2);
+                cajaBarra.textContent = 'Carga Completada';
+            } 
+        },500);
+    </script>
+</body>
+</html>
