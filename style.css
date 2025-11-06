@@ -22,11 +22,11 @@ body{
 } 
 main > div{
     max-width: 60vw;
-    background: rgba(141, 47, 196, 0.356);
+    background: rgba(141, 47, 196, 0.452);
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.5);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.575);
     padding: 1em;
     margin: 1em auto;
@@ -55,7 +55,7 @@ a:hover{
     text-shadow: 0 0 10px #ecaf7e;
 }
 p{
-    text-indent: 50px;
+    /*text-indent: 50px;*/
     padding: 1.5em;
     text-align: justify;
 }
@@ -88,6 +88,41 @@ p{
 }
 #capa2{
     left:400px;
+}
+.div__form{
+    display: flex;
+    padding: 1em 0;
+    align-items: center;
+    border-bottom: 1px solid rgba(141, 47, 196, 0.575);
+    label{
+        display: block;
+        width: 20vw;
+        margin-right: 1em;
+    }
+    input{
+        background-color: #ffffff94;
+        border: 1px solid rgb(141, 47, 196);
+        padding: 0.5em;
+        border-radius: 4px;
+        width: 100%;
+    }
+}
+input[type='button'], input[type='submit']{
+    background-color: rgb(29, 233, 233);
+    padding: 0.8em;
+    border: none;
+    border-radius: 5px;
+    color: #053838;
+    font-weight: bold;
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.opcional{
+    opacity: 0.6;
 }
 
 @media only screen and (max-width: 700px){

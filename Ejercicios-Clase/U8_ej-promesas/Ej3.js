@@ -12,9 +12,12 @@ let verificarUsuario = (nombre) =>{
     });
 }
 let cargarDatosUsuario = () =>{
-    setTimeout(() => {
-        return Promise.resolve('Datos del usuario cargados correctamente');
-    }, 2000);
+    return new Promise((res)=>{
+        setTimeout(() => {
+            res('Datos del usuario cargados correctamente');
+        }, 2000);
+    })
+    
 }
 
 boton.addEventListener('click',() =>{
