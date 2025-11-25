@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Entorno Cliente</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <main>
+        <div class="enunciado">
+            <div class="return">
+                <a href="practAjax1.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFF2E2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                    </svg>
+                </a>
+            </div>
+            <h1>Practicas de Viktoria</h1>
+            <h2>Practica Ajax 2</h2>
+            <script src="prac2.js"></script>
+            <p>
+                Realiza una aplicación web que pida al usuario un número que represente el ID de un
+                producto. Al pulsar un botón, deben realizarse las siguientes acciones:
+                1. GET:
+                Llamar a https://dummyjson.com/products/{id} sustituyendo {id} por el número
+                introducido.
+                o Si la petición es correcta, mostrar en pantalla:
+                ▪ el id
+                ▪ el título del producto
+                ▪ el precio
+                o Si el producto no existe (por ejemplo, letras o números fuera del rango), la
+                API devolverá un error y debe mostrarse el status correspondiente (404).
+                2. POST:
+                Con los datos obtenidos en el GET, hacer una petición POST a
+                https://httpbin.org/post enviando en el body un JSON con:
+                o id
+                o title
+                o price
+                La respuesta de esta API devuelve dentro de la propiedad json el mismo objeto enviado.
+                Debe mostrarse en la pantalla el title devuelto por el POST.
+                3. STATUS:
+                Si todo ha ido bien, mostrar 200.
+                Si hubo error en el GET, mostrar el código de error recibido (404, etc.).
+                El ejercicio puede resolverse con promesas o con async/await.
+            </p>
+        </div>
+        <div id="res"></div> 
+    </main>
+    
+</body>
+</html>
