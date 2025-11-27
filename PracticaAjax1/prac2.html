@@ -18,35 +18,47 @@
             </div>
             <h1>Practicas de Viktoria</h1>
             <h2>Practica Ajax 2</h2>
-            <script src="prac2.js"></script>
             <p>
                 Realiza una aplicación web que pida al usuario un número que represente el ID de un
                 producto. Al pulsar un botón, deben realizarse las siguientes acciones:
-                1. GET:
+                <br>1. GET: <br>
                 Llamar a https://dummyjson.com/products/{id} sustituyendo {id} por el número
                 introducido.
                 o Si la petición es correcta, mostrar en pantalla:
-                ▪ el id
-                ▪ el título del producto
-                ▪ el precio
+                <ul>
+                    <li>el id</li>
+                    <li>el título del producto</li>
+                    <li>el precio</li>
+                </ul>
                 o Si el producto no existe (por ejemplo, letras o números fuera del rango), la
-                API devolverá un error y debe mostrarse el status correspondiente (404).
-                2. POST:
+                API devolverá un error y debe mostrarse el status correspondiente (404). <br>
+                <br> 2. POST: <br>
                 Con los datos obtenidos en el GET, hacer una petición POST a
                 https://httpbin.org/post enviando en el body un JSON con:
-                o id
-                o title
-                o price
+                <ul>
+                    <li>id</li>
+                    <li>title</li>
+                    <li>price</li>
+                </ul>
                 La respuesta de esta API devuelve dentro de la propiedad json el mismo objeto enviado.
-                Debe mostrarse en la pantalla el title devuelto por el POST.
-                3. STATUS:
+                Debe mostrarse en la pantalla el title devuelto por el POST. <br>
+                <br>3. STATUS: <br>
                 Si todo ha ido bien, mostrar 200.
                 Si hubo error en el GET, mostrar el código de error recibido (404, etc.).
                 El ejercicio puede resolverse con promesas o con async/await.
             </p>
         </div>
-        <div id="res"></div> 
+        <div id="errores"></div>
+        <div>
+            <form action="">
+                <label for="product">ID de Producto:</label>
+                <input type="text" id="idProduct" name="idProduct">
+                <input type="button" value="Enviar" id="boton">
+            </form>
+        </div> 
+        <div id="res1"></div>
+        <div id="res2"></div>
     </main>
-    
+    <script src="prac2.js"></script>
 </body>
 </html>

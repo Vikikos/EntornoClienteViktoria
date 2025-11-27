@@ -7,13 +7,15 @@ fetch('https://randomuser.me/api')
     }
 })
 .then((data)=>{
+    let person = data['results'][0];
     let caja = document.getElementById('res');
-    
-    for (const person of data['data']) {
-        caja.innerHTML = person['firstname'];
-        caja.innerHTML += '<img src="' + person['image'] + '">';
-    }
-})
+    console.log(person['name'])
+    document.getElementById('imgPerson').innerHTML = '<img src="'+ person['picture']['large'] +'">'
+    caja.innerHTML = person['name']['first'] + ' ' + person['name']['last'];
+    caja.innerHTML += '<br>Email: '+ person['email'];
+    caja.innerHTML += '<br>Street: ' + person['location']['street']['name'] + ' ' + person['location']['street']['number'];
+    caja.innerHTML += '<br>' + person['location']['country'];
+}) 
 .catch(error=>{
     console.log(error);
 })
